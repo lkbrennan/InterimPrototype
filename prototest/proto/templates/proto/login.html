@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'proto/style.css' %}" type="text/css">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Hi! Please input your details here!</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">login</button>
+        </form>
+    </div>
+{% endblock %}

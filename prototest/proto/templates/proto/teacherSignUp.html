@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Hi Teacher! Please Input your details below!</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label>Email</label>
+        <input type="text">
+        <label>Name</label>
+        <input type="text">
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

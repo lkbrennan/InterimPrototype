@@ -1,0 +1,16 @@
+{% if latest_student_list %}
+    <ul>
+    {% for student in latest_student_list %}
+        <li><a href="{% url 'detail' student.id %}">{{ student.student_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No students available</p>
+{% endif %}
+
+<h1>Hi! What would you like to sign up as?</h1>
+
+<ul>
+    <li><a href="">Teacher</a></li>
+    <li><a href="">Parent</a></li>
+</ul>
